@@ -1,0 +1,223 @@
+Prompt Template: Comprehensive Function Documentation
+
+Please create comprehensive code comments for this function following [JSDoc/Python docstring/etc.] conventions:
+
+```[language]
+[Paste function code here]
+```
+
+The documentation should include:
+
+A clear description of what the function does
+All parameters with types and descriptions
+Return value with type and description
+Any exceptions or errors that might be thrown
+Example usage
+Any important notes or edge cases developers should be aware of
+
+
+
+
+Prompt Template: Documentation Style Conversion
+
+Please convert this documentation to [target style] format:
+
+Original documentation:
+
+```
+[Paste existing documentation]
+```
+
+Target style: [JSDoc/Google style/NumPy style/etc.]
+
+Language: [JavaScript/Python/etc.]
+
+Please ensure all information from the original is preserved while following the conventions of the target style.
+
+Practical Application:
+Standardize documentation across a codebase
+Update legacy documentation to current standards
+Ensure consistent style in team projects
+Make documentation more accessible to developers familiar with standard formats
+
+
+
+
+
+API documentation
+
+Prompt Template: Endpoint Documentation Generation
+
+Please create comprehensive documentation for this API endpoint:
+
+Endpoint: [HTTP method] [endpoint path]
+
+Implementation code:
+
+```[language]
+[Paste endpoint implementation code]
+```
+
+Please include:
+
+A clear description of the endpoint's purpose
+Request parameters (path, query, body) with types and descriptions
+Response format with status codes and examples
+Authentication requirements
+Potential error responses with codes and messages
+At least 2 example requests with their responses
+Any rate limiting or special considerations
+
+
+Practical Application:
+Generate consistent documentation for all API endpoints
+Ensure documentation covers all necessary aspects
+Provide clear examples for API consumers
+Document error scenarios and edge cases
+
+
+
+Prompt Template: API Reference Conversion
+Prompt Template:
+Please convert this API information into a structured [Swagger/OpenAPI/API Blueprint/Markdown] document:
+
+API details:
+
+[Paste API information, can be informal description]
+
+I need the documentation to include:
+
+Endpoint definitions with paths and methods
+Request parameters and body schemas
+Response schemas with status codes
+Example requests and responses
+Error handling information
+Format the output as a complete, valid [Swagger/OpenAPI/etc.] document.
+
+
+Practical Application:
+Transform informal API descriptions into structured formats
+Create standardized API documentation from code or descriptions
+Generate documentation that can be used with API documentation tools
+Ensure consistent structure across all API endpoints
+
+
+
+Prompt Template: API Usage Guide Creation
+Prompt Template:
+Please create a developer guide for using our API. The guide should explain how to:
+
+Get started (authentication, base URL, general concepts)
+Perform common operations using the following endpoints:
+[List key endpoints with brief descriptions]
+Handle errors and troubleshoot common issues
+Follow best practices when integrating with our API
+API information:
+
+[Paste API details or link to documentation]
+
+Target audience: [Describe experience level and background of users]
+
+Tone: [Friendly/formal/technical/etc.]
+
+Practical Application:
+Create user-friendly guides for API consumption
+Help developers understand the API conceptually
+Document common usage patterns and workflows
+Provide troubleshooting guidance
+
+
+
+
+
+Prompt Template: Project README Generation
+
+Prompt Template:
+Please create a comprehensive README.md file for my project based on the following information:
+
+Project name: [Name]
+
+Description: [Brief description]
+
+Key features:
+
+[Feature 1]
+[Feature 2]
+[etc.]
+Technologies used: [List technologies, frameworks, languages]
+
+Installation requirements: [List prerequisites]
+
+The README should include:
+
+Clear project title and description
+Installation instructions
+Basic usage examples
+Features overview
+Configuration options
+Troubleshooting section
+Contributing guidelines
+License information
+Code structure overview:
+
+[Briefly describe main directories/files or paste project structure]
+
+Practical Application:
+Create standardized README files for all projects
+Ensure documentation covers essential information
+Make projects more accessible to new users and contributors
+Present project information in a clear, structured format
+
+
+
+Prompt Template: Step-by-Step Guide Creation
+Prompt Template:
+Please create a step-by-step guide for how to [specific task/process] in our application.
+
+The guide should:
+
+Start with any prerequisites or required access
+Break down the process into clear, numbered steps
+Include screenshots or code blocks where indicated [Placeholder]
+Highlight potential issues or common mistakes
+End with a troubleshooting section for common problems
+Process overview:
+
+[Describe the task or provide notes on what the user needs to accomplish]
+
+User experience level: [Beginner/Intermediate/Advanced]
+
+Practical Application:
+Create user-friendly guides for complex procedures
+Document installation or configuration processes
+Help users troubleshoot common issues
+Create onboarding materials for new team members
+
+
+
+Prompt Template: FAQ Document Generation
+Prompt Template:
+Please help me create a comprehensive FAQ document for [project/feature/product].
+
+Basic information:
+
+[Brief description of what we're creating FAQs for]
+[Target audience]
+[Any specific areas to focus on]
+Please include:
+
+Questions about getting started
+Questions about common features and functionality
+Questions about troubleshooting common issues
+Questions about [specific area of interest]
+For each question, provide a clear, concise answer that would be helpful to our users.
+
+Known issues or common user questions:
+
+[List any specific questions or issues to include]
+
+Practical Application:
+Answer common user questions proactively
+Create help center content
+Reduce support requests
+Improve user experience with self-service information

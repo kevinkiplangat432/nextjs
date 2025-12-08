@@ -49,3 +49,399 @@ Gives you specific questions to ask your team that will demonstrate engagement
 
 PROMPT 2:
 Finding Features Implimentations Locations
+
+I need to work on the [specific feature] in this codebase, but I'm not sure where the code for this feature lives.
+
+My approach so far:
+
+- I've searched for keywords like [terms you searched for]
+
+- I looked in [directories you checked] which seemed relevant
+
+- I think the feature might relate to [your guess about related components]
+
+Project structure:
+
+[Paste relevant directory structure]
+
+Based on my search, these files might be relevant, but I'm not sure:
+
+[Paste file names or search results that seem potentially related]
+
+Can you help me:
+
+1. Evaluate my search approach and suggest improvements
+
+2. Identify which files and directories most likely contain the implementation for this feature
+
+3. Suggest specific search terms or patterns that would be more effective
+
+4. Explain what parts of the feature might be located in different areas of the codebase
+
+5. Recommend a step-by-step investigation process to understand the complete feature flow
+
+Also, what questions could I ask myself as I'm exploring the code to ensure I'm on the right track? What specific patterns should I look for to confirm I've found all the relevant parts?
+
+After your guidance, could you give me a small challenge to test my understanding of how to navigate this feature's code?
+
+
+Practical application
+Helps you articulate your current approach and thinking process
+Validates and improves your search strategy
+Provides a systematic process for feature exploration rather than random searching
+Teaches you to recognize patterns that connect related code
+Gives you self-assessment questions to gauge your progress
+
+
+
+
+PROMPT 3:
+Understanding Domains Models and Business Concepts
+
+I'd like you to act as a senior developer who deeply understands our codebase's domain model. I'm a junior developer trying to make sense of the business logic and domain concepts in this application.
+
+Here's what I've found in the codebase:
+
+[Paste relevant model/entity classes, database schemas, or data structures]
+
+Based on this code, my current understanding is:
+
+- The system seems to be modeling [your interpretation of what the system represents]
+
+- I think [Entity A] and [Entity B] are related because [your reasoning]
+
+- The [specific field or method] appears to represent [your guess at its business purpose]
+
+- I'm confused about why [specific aspect you don't understand]
+
+Could you, as a senior developer:
+
+1. Validate my current understanding, correcting any misconceptions
+
+2. Help me recognize the core domain concepts represented in this code
+
+3. Explain the relationships between these entities in business terms, not just technical relationships
+
+4. Clarify any domain-specific terminology or patterns I might be missing
+
+5. Help me connect these models to actual user-facing features or business processes
+
+Then, please ask me 3-5 questions that would test my understanding of this domain model. These should be questions that make me think about the business logic, not just the code syntax.
+
+Finally, suggest a simple diagramI could sketch to visualize these relationships that would help solidify my understanding.
+
+
+
+
+Practical Application:
+Creates a learning dialogue that mimics pair programming with a senior developer
+Forces you to articulate your current understanding, which helps identify gaps
+Provides domain knowledge interpretation, not just technical explanation
+Tests your understanding through targeted questions
+Encourages visualization to reinforce mental models
+Bridges the gap between code and business functionali
+
+
+
+
+
+2. Understanding Existing Code Funtionality
+
+PROMPT 1:
+Understanding how a specific feature works
+I'm trying to understand how [specific feature] works in our [language/framework] codebase.
+
+This feature seems to handle [brief description of what you think it does].
+
+Here are the key files that appear to be involved:
+
+1. [filepath 1] - Seems to be [your guess about purpose]
+
+2. [filepath 2] - Might be handling [your guess]
+
+3. [filepath 3] - Contains references to [relevant terms]
+
+Here are code snippets from parts I'm struggling to understand:
+
+[First file snippet]
+
+[Second file snippet]
+
+Could you:
+
+1. Explain in simple terms what this component actually does
+
+2. Walk me through the execution flow when [specific trigger/action happens]
+
+3. Clarify how these files interact with each other
+
+4. Identify any external dependencies or services this component relies on
+
+5. Explain any complex code blocks
+
+6. Provide a mental model I can use to think about this component
+
+I'm particularly confused about [specific aspect], so extra detail there would help.
+
+Finally, suggest 3 small code changes I could make to validate my understanding. Do not give the me change, and instead give me the requirement.
+
+
+
+Practical Application:
+Understand how a feature is implemented so you can plan changes
+Test your own understanding of the codebase
+Improve your mental model of the various code components and features of the codebase
+
+
+
+
+
+PROMPT 2:
+Deepen Understanding of a codebase
+I'd like your help in deepening my understanding of a codebase by you acting as my senior development pair programmer.
+
+First, I'll share my current understanding of the code I'm exploring. Please acknowledge what parts I've understood correctly, then guide me with thoughtful questions rather than direct explanations.
+
+## My Current Understanding:
+
+I'm exploring [describe the specific code functionality or files you're working with]. From what I can tell, it seems to [describe what you think this code does].
+
+The main files involved appear to be:
+
+- [list specific files you're looking at]
+
+I think the code works like this:
+
+[describe what you believe happens when this code runs]
+
+What's still unclear to me is [mention specific parts that confuse you].
+
+## What I'd like from you:
+
+1. Acknowledge what parts of my understanding seem accurate
+
+2. Ask me 3-5 thoughtful questions that will help me discover insights about:
+
+- What specific parts of the code actually do
+
+- How data moves through these functions
+
+- What happens in different scenarios (like error cases)
+
+- Why certain implementation choices were made
+
+3. For some questions, ask me to share specific code snippets that would help answer the question
+
+4. End with a practical question about how I might use or modify this code
+
+Please don't give me direct explanations - help me discover the answers through guided questioning.
+
+
+
+
+Practical Application:
+Enhance your understanding of code based on your current understanding as starting point
+Learn by simulating an interaction with a more experienced developer
+Make use of guided questions to help you deepen understanding
+
+
+
+
+
+
+PROMPT 3:
+Mapping Data Flow and Management
+
+I need help understanding how data flows through our [language/framework] application, specifically for the [feature name] functionality.
+
+Here's what I know so far:
+
+- The feature starts at [entry point, e.g., API endpoint, user action]
+
+- It seems to involve these components/files:
+
+1. [Component/file 1]
+
+2. [Component/file 2]
+
+3. [Component/file 3]
+
+Here are key code snippets that show data handling:
+
+[First snippet showing data input/initial state]
+
+[Second snippet showing data transformation/processing]
+
+[Third snippet showing where data is stored/output]
+
+What I'm trying to understand:
+
+1. What is the complete path data takes from input to output?
+
+2. How and where is state managed throughout this process?
+
+3. What transformations happen to the data at each step?
+
+4. Where are potential points of failure in this data flow?
+
+5. How does the application handle edge cases or errors?
+
+I've noticed [specific data structure or state management approach] being used but I'm not sure why this approach was chosen over alternatives.
+
+Could you help me create a clear mental model of:
+
+1. The complete data flow diagram
+
+2. Where and how state changes occur
+
+3. How I might debug issues in this flow
+
+4. What I should consider if I need to modify this data flow in the future
+
+Please include any relevant descriptions, design patterns or principles that would help me understand the existing code decisions.
+
+Practical Application:
+Visualize and understand complex data transformations in an application
+Gain clarity on state management approaches in different parts of the application
+Better understand coding decisions around data handling
+Prepare for making modifications to data flow without breaking existing functionality
+
+
+
+
+
+
+Prompt 1: Understand an Algorithm Through Step-by-Step Analysis
+I'm trying to understand this algorithm/function in our codebase:
+
+[Paste complex function here]
+
+Based on my current understanding:
+
+1. I think this function is trying to [your best guess at purpose]
+
+2. The inputs seem to be [parameters you can identify] and it returns [what you think it returns]
+
+3. I'm particularly confused about [specific part that's unclear]
+
+Could you help me understand this by:
+
+1. Breaking down the algorithm into key sections with their purposes
+
+2. Walking through a simple example execution with concrete values
+
+3. Explaining the core technique/pattern being used here
+
+4. Highlighting any non-obvious optimizations or tricks
+
+After your explanation, could you ask me 2-3 targeted questions that would test my understanding of this algorithm's:
+
+- Underlying principles
+
+- Edge cases
+
+- Performance characteristics
+
+This will help me make sure I've really grasped how it works.
+
+
+Practical Application:
+Gain a deeper understanding of complex algorithms through concrete examples
+Test your comprehension by answering the follow-up questions
+Build a mental model of how sophisticated code operates
+Learn to identify common algorithmic patterns and techniques
+
+
+
+Prompt 2: Decipher Code with Unclear Intent or Poor Documentation
+
+I need help understanding the intent behind this poorly documented/named code:
+
+[Paste code with unclear naming or sparse comments]
+
+Here's what I've figured out so far:
+
+- This code appears in [describe where it's used in the codebase]
+
+- It seems to be called when [context of function calls]
+
+- I can see it's manipulating [data structures or state it affects]
+
+- The variable names suggest it might be [your theory about purpose]
+
+Please help me by:
+
+1. Suggesting better names for functions/variables that reflect their likely purpose
+
+2. Identifying the programming patterns or techniques being used
+
+3. Creating pseudocode that reveals the underlying intent
+
+4. Drafting documentation comments that would make this code understandable
+
+Then, please share 3-4 questions I should ask myself to validate whether my new understanding is correct. These questions should help me check my understanding against the rest of the codebase and application behavior.
+
+Finally, what are some small, safe experiments I could run to verify how this code actually behaves without disrupting the system?
+
+
+
+
+Practical Application:
+Turn opaque code into understandable logic
+Practice recognizing patterns despite poor naming
+Develop techniques for documenting unclear code
+Learn how to safely test your understanding of unfamiliar code
+
+
+Prompt 3: Understand Complex Logic and Control Flow
+
+I'm trying to untangle the logic in this complex function with nested conditionals and loops:
+
+[Paste complex code with nested logic]
+
+My current understanding of the control flow is:
+
+[Describe your best attempt at tracing the logic path]
+
+I'm particularly unsure about:
+
+1. [Specific conditional or loop that's confusing]
+
+2. [Another point of confusion]
+
+3. [Any variables that change in unclear ways]
+
+Could you help me by:
+
+1. Creating a visual representation of the control flow (described in text)
+
+2. Refactoring this code into more understandable segments without changing functionality
+
+3. Explaining the key decision points and their interdependencies
+
+4. Identifying any potential logic bugs or edge cases that might not be handled correctly
+
+Then, guide me through an exercise where I can test my understanding:
+
+- Provide 2-3 specific input scenarios
+
+- Ask me to predict what would happen in each case
+
+- Explain what actually happens and why
+
+This will help me build an accurate mental model of this complex logic.
+
+
+
+
+
+Practical Application:
+Transform tangled logic into clear decision paths
+Learn refactoring techniques for complicated functions
+Practice tracing execution flow through complex conditions
+Develop skills for detecting potential logic errors
+
+
+
+
+
