@@ -1,65 +1,117 @@
-import Image from "next/image";
+import { fetchPopularBooks } from '@/lib/api';
+import BookGrid from '@/components/books/BookGrid';
+import SearchBar from '@/components/search/SearchBar';
+import Link from 'next/link';
 
-export default function Home() {
+/**
+ * Homepage component
+ * @returns {JSX.Element} Homepage
+ */
+export default async function HomePage() {
+  // Fetch popular books for the homepage
+  let popularBooks = [];
+  let error = null;
+  
+  try {
+    popularBooks = await fetchPopularBooks(12);
+  } catch (err) {
+    console.error('Error fetching popular books:', err);
+    error = err.message;
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="space-y-12">
+      {/* Hero section */}
+      <section className="text-center py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Discover Free Classics
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Explore thousands of free books from Project Gutenberg&apos;s collection. 
+          Read, download, and enjoy literary classics at no cost.
+        </p>
+        
+        {/* Search bar */}
+        <div className="max-w-3xl mx-auto">
+          <SearchBar />
+        </div>
+        
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Over 60,000 free eBooks • No registration required • Multiple formats available</p>
+        </div>
+      </section>
+
+      {/* Featured books */}
+      <section>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-gray-800">Popular Books</h2>
+          <Link 
+            href="/books" 
+            className="text-blue-600 hover:text-blue-800 font-medium"
+          >
+            View All →
+          </Link>
+        </div>
+        
+        <BookGrid 
+          books={popularBooks} 
+          loading={false} 
+          error={error} 
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+      </section>
+
+      {/* Features section */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+        <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
+          <div className="text-4xl mb-4">📚</div>
+          <h3 className="text-xl font-bold mb-2">Free Forever</h3>
+          <p className="text-gray-600">
+            All books are in the public domain and completely free to read and download.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
+          <div className="text-4xl mb-4">📱</div>
+          <h3 className="text-xl font-bold mb-2">Multiple Formats</h3>
+          <p className="text-gray-600">
+            Read on any device with EPUB, PDF, HTML, and plain text formats available.
+          </p>
         </div>
-      </main>
+        
+        <div className="text-center p-6 bg-white rounded-lg shadow-sm border">
+          <div className="text-4xl mb-4">🌍</div>
+          <h3 className="text-xl font-bold mb-2">Multiple Languages</h3>
+          <p className="text-gray-600">
+            Books available in English, French, Spanish, German, and many more languages.
+          </p>
+        </div>
+      </section>
+
+      {/* Call to action */}
+      <section className="text-center py-12 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Explore?
+        </h2>
+        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          Browse our complete collection of free books. Find your next favorite read today.
+        </p>
+        <div className="space-x-4">
+          <Link
+            href="/books"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700"
+          >
+            Browse All Books
+          </Link>
+          <Link
+            href="https://www.gutenberg.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50"
+          >
+            Visit Project Gutenberg
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
