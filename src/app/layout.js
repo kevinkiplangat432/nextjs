@@ -1,8 +1,5 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Layout from '@/components/layout/Layout';
-
-const inter = Inter({ subsets: ['latin'] });
 
 /**
  * Root layout component
@@ -24,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="font-sans">
         <Layout>{children}</Layout>
       </body>
     </html>
