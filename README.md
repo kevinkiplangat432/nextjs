@@ -1,3 +1,5 @@
+###### https://docs.google.com/document/d/1wTCp38KO_t5JRbKwZWpwaRHiK92UQIImKMQ_foFh3UE/edit?usp=sharing
+
 #                       Book Explorer 
 
 
@@ -41,6 +43,7 @@ Accessibility: WCAG compliant with proper ARIA labels
 
 ### Live Demo
 live link === https://nextjs-lilac-alpha-70.vercel.app/
+
 
 ## Technology Stack
 #### Frontend
