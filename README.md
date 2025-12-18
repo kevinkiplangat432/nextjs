@@ -40,7 +40,7 @@ Progressive Enhancement: Works with JavaScript disabled
 Accessibility: WCAG compliant with proper ARIA labels
 
 ### Live Demo
-live link ===
+live link === https://nextjs-lilac-alpha-70.vercel.app/
 
 ## Technology Stack
 #### Frontend
